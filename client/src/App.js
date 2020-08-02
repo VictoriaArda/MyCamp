@@ -8,8 +8,7 @@ import Searchbar from "./components/Files/Searchbar";
 class App extends Component {
     render() {
         return ( < h2 > Welcome to React 
-        <Searchbar/> 
-        <Daterange/>   
+         <Daterange/> <Searchbar/> 
 
         <Carousel/>
             
