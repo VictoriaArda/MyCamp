@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link href="style.css" rel="stylesheet">
+    <title>Home Owner</title>
+
+
+
+</head>
+<body>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">MyCamp</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link"  href="index.html">Home <span class="sr-only">(current)</span> <i class='fas fa-home'></i></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="login.html">Login <i class='fas fa-suitcase'></i></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="signup.html">Sign Up <i class='fas fa-address-card'></i></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+      
+      <div id="title" style="height: 400px">
+          </div>
+          
+          <meta charset="UTF-8">
+          <title>Form</title>  
+          <link href="style.css" rel="stylesheet" type="text/css">
+          <div class="container">
+            <form id="contact" action="" method="post">
+                <h3>Rent your place as a Homeowner!</h3>
+                <h4>Tell us about your place!</h4>
+                <fieldset>
+                    <input placeholder="Location" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <form action="/action_page.php">
+                        <label for="rooms">Choose Rental Option:</label>
+                        <select id="rooms" name="rooms">
+                            <option value="Entire">Entire Place</option>
+                            <option value="Private">Private Room</option>
+                          <option value="Shared">Shared Room</option>
+                        </select>
+                        
+                        <form action="/action_page.php">
+                            <label for="guests">How Many Guests:</label>
+                            <select id="guests" name="guests">
+                              <option value="1 Guests">1 Guests</option>
+                              <option value="2 Guests">2 Guests</option>
+                              <option value="3 Guests">3 Guests</option>
+                              <option value="4 Guests">4 Guests</option>
+                            </select>
+
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Inquire Now</button>
+                </fieldset>
+          </form>
+        
+          
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/members.js"></script>
+</body>
+</html>
