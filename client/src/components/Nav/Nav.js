@@ -1,7 +1,7 @@
   import React from "react";
   import "../public/style.css"
   function Nav() {
-      return ( <
+      return ( <div
           nav className = "navbar navbar-expand-lg navbar-light bg-light" >
  
           <button
@@ -15,11 +15,12 @@
         >
           <span className="navbar-toggler-icon" />
         </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
+        </div>
+
+        <div id="navbar" classname="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                   <li class="nav-item active">
-                      <a class="nav-link"  href="index.html">Home <span class="sr-only">(current)</span> <i class='fas fa-home'></i></a>
+                      <a href="index.html">Home <i class='fas fa-home'></i></a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="login.html">Login <i class='fas fa-suitcase'></i></a>
