@@ -74,12 +74,9 @@ class Searchbar extends Component {
 
     };
 
-    handleOnInputChange = (event) => {
-        const query = event.target.value;
-        this.setState({ query: query, loading: true, message: "" }, () => {
-            this.renderResults(1, query);
-        });
-    };
+   onChange = (e) => {
+        this.setState({listing: e.target.value});
+    }
 
     renderSearchResults = (query) => {
         const {results} = this.state;
@@ -106,6 +103,7 @@ class Searchbar extends Component {
         const { query } = this.state;
         console.log(this.state)
         return (
+            
             <div className="container">
                 <label className="location-label" htmlFor="location-input">
                     <input
@@ -114,9 +112,11 @@ class Searchbar extends Component {
                         value={query}
                         id="location-input"
                         placeholder="Enter location"
-                        onChange={this.handleOnInputChange}
+                        onChange={this.onChange}
                     />
                 </label>
+                <button className="btn btn-primary btn-lg btn-block mb-5" type="submit">Search Locations</button>
+
 
                 {this.renderSearchResults()}
             </div>
