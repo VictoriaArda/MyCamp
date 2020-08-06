@@ -1,130 +1,86 @@
 import React, { Component } from 'react';
 import "../Style/searchbar.css";
 import axios from 'axios';
+import { Consumer } from "../../context";
 
 
 
 class Searchbar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            query: "",
-            results: {},
-            loading: false,
-            message: "",
-
-        }
-        this.cancel = "";
-
+    state = {
+        location: "",
+        guests: ""
     };
 
-    renderResults = () => {
-        // const pageNumber = updatedPageNumber ? `&page=4${updatedPageNumber}` : "";
-        // const queryURL = `${}`;
-
-        if (this.cancel) {
-            this.cancel.cancel();
-        }
-        this.cancel = axios.CancelToken.source();
-
-        axios({
-            "method": "GET",
-            "url": `https://airbnb-com.p.rapidapi.com/listings/nearby/37.788719679657554/-122.40057774847898`,
-            "headers": {
-                "content-type": "application/octet-stream",
-                "x-rapidapi-host": "airbnb-com.p.rapidapi.com",
-                "x-rapidapi-key": "e9a234de2amshfb394e36da3e9f0p1fe03fjsnda119de32de4",
-                "useQueryString": true
-            }, "params": {
-                "min_bathrooms": "0",
-                "check_out": "2021-02-26",
-                "hotel_room": "false",
-                "max_guests": "1",
-                "check_in": "2021-02-25",
-                "private_room": "false",
-                "min_bedrooms": "0",
-                "offset": "0",
-                "entire_home": "false",
-                "min_price": "0",
-                "max_price": "5000",
-                "min_beds": "0",
-                "radius": "5",
-                "shared_room": "false"
-            }
-        })
+    searchLocation = (e) => {
+    e.preventDefault();
+    axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${this.state.location}&key=4f4e2ab63ee1486aa8d4376d737c5ce1&language=en&pretty=1`)
         .then (res => {
-            const notFound = ! res.data.listings.length
-                            ? 'No more results'
-                            : ""
-            this.setState ({
-                results: res.data.listings,
-                message: notFound,
-                loading: false
-            })
-            console.log(res.data)
-        })
-        .catch (error => {
-            if(axios.isCancel(error) || error) {
-                this.setState({
-                    loading: false,
-                    message: "failed"
+            console.log (res.data.results[0].geometry)
+            const {lat, lng} = (res.data.results[0].geometry)
+           return axios({
+                "method":"GET",
+                "url":`https://airbnb-com.p.rapidapi.com/listings/nearby/${lat}/${lng}`,
+                "headers":{
+                "content-type":"application/octet-stream",
+                "x-rapidapi-host":"airbnb-com.p.rapidapi.com",
+                "x-rapidapi-key":"e9a234de2amshfb394e36da3e9f0p1fe03fjsnda119de32de4",
+                "useQueryString":true
+                },"params":{
+                "check_out":"2021-02-26",
+                 }
                 })
-            }
+                
         })
-
-    };
-
-   onChange = (e) => {
-        this.setState({listing: e.target.value});
-    }
-
-    renderSearchResults = (query) => {
-        const {results} = this.state;
-
-        if(Object.keys(results).length && results.length) {
-            return(<div className="results-container">
-                    {results.map(result => {
-                        return (
-                        <a key={result.id} href={result.picture_url} className ="result-item">
-                            <h1 className="public-location"> {result.pricing_quote.price_string}</h1>
-                            <div className="image-wrapper">
-                                <img className="image"src={result.listing.picture_url} alt={result.public_location}/>
-                            </div>
-
-                        </a>
-                        );
-                    })}
-                </div>
-            )
-        }
-    }
-
-    render() {
-        const { query } = this.state;
-        console.log(this.state)
-        return (
+    
+        
+        .then(res => {
+            console.log(res.data)
+            return this.setState({listings: res.data.listings});
             
-            <div className="container">
-                <label className="location-label" htmlFor="location-input">
-                    <input
-                        type="text"
-                        name="query"
-                        value={query}
-                        id="location-input"
-                        placeholder="Enter location"
-                        onChange={this.onChange}
-                    />
-                </label>
-                <button className="btn btn-primary btn-lg btn-block mb-5" type="submit">Search Locations</button>
+    })
+        .catch (err => console.log(Error));
+            
+    
 
+    }
+            
+  
 
-                {this.renderSearchResults()}
-            </div>
+    
+    onChange = (e) => {
+        this.setState({location: e.target.value});
+    }
+    
+    render() {
+        return (
+            <Consumer>
+                {value => {
+                    return (
+                        <div className="card card-body mb-4 p-4">
+                            <h1 className="display-4 text-center">Search Locations</h1>
+                            <form onSubmit={this.searchLocation}>
+                            <div className="form-group">
+                                <input
+                                 type="text" className="form-control form-control-lg" placeholder="Location..."
+                                name="location"
+                                value={this.state.location}
+                                onChange={this.onChange}/>
+                                 <input
+                                 type="text" className="form-control form-control-lg" placeholder="# of Guests"
+                                name="guests"
+                                value={this.state.guests}
+                                onChange={this.onChange}/>
+
+                            </div>
+                            <button className="btn btn-primary btn-lg btn-block mb-5" type="submit">Search Locations</button>
+                            </form>
+                        </div>);
+                }}
+            </Consumer>
+
         )
     }
-
 }
-
 
 
 
