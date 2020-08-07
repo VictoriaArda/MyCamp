@@ -8,20 +8,14 @@ import pic4 from "../Files/projectpics/pic4.jpg";
 import pic5 from "../Files/projectpics/pic5.jpeg";
 import pic6 from "../Files/projectpics/pic7.jpg";
 
-
-
-
-
-
-
 function Carousel() {
     let carouselArray = [
-        <ImagesCar className= "imgCar" src={pic1} />,
-        <ImagesCar src={pic2} />,
-        <ImagesCar src={pic3} />,
-        <ImagesCar src={pic4} />,
-        <ImagesCar src={pic5} />,
-        <ImagesCar src={pic6} />,
+        <ImagesCar src={pic1}  />,
+        <ImagesCar src={pic2}  />,
+        <ImagesCar src={pic3}  />,
+        <ImagesCar src={pic4}  />,
+        <ImagesCar src={pic5}  />,
+        <ImagesCar src={pic6}  />,
 
     ];
     const [x, setX] = useState(0);
@@ -39,7 +33,9 @@ function Carousel() {
                     return (
                         <div key={index} className="slide" style={{ transform: `translateX(${x}%)` }}>
                             {item}
-                        </div>
+                        
+                            </div>                        
+                        
                     )
                 })
             }

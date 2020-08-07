@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from "react";
+import {Link}  from 'react-router-dom';
+import {Navbar, Nav ,NavDropdown ,Form,FormControl, Button } from "react-bootstrap";
 import "../Style/carousel.css";
-import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button'
-import Button from "./Button";
 
-
-
-
+function Head(){
+  return(
 <Navbar bg="light" expand="lg">
-  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+  <Navbar.Brand href="#home">MYCAMP</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
               <ul className="navbar-nav mr-auto">
                 <li><Link to={'/'} className="nav-link"> Home </Link></li>
                 <li><Link to={'/Contact'} className="nav-link">Contact</Link></li>
@@ -20,10 +17,8 @@ import Button from "./Button";
                 <li><Link to={'/Register'} className="nav-link">Register</Link></li>
                 <li><Link to={'/Login'} className="nav-link">Login</Link></li>
                 <li><Link to={'/AddYourHome'} className="nav-link">AddYourHometoMyCamp</Link></li>
-                <li><Link to={'/Results'} className="nav-link">Results</Link></li>
-              </ul>
-              </nav>
-      <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              </ul>            
+              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
@@ -32,11 +27,11 @@ import Button from "./Button";
       </NavDropdown>
     </Nav>
     <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-success">Search</Button>
-    </Form>
+ <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+ <Button variant="outline-success">Search</Button>
+</Form>
   </Navbar.Collapse>
 </Navbar>
 
-
-export default Navbar;
+  );}
+export default Head;
