@@ -5,6 +5,7 @@ import { Consumer } from "../../context";
 import Daterange from "./Daterange";
 
 
+
 class Searchbar extends Component {
     state = {
         location: "",
@@ -15,7 +16,7 @@ class Searchbar extends Component {
     e.preventDefault();
     axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${this.state.location}&key=4f4e2ab63ee1486aa8d4376d737c5ce1&language=en&pretty=1`)
         .then (res => {
-            console.log (res.data.results[0].geometry)
+          console.log (res.data.results[0].geometry)
             const {lat, lng} = (res.data.results[0].geometry)
            return axios({
                 "method":"GET",
@@ -30,8 +31,7 @@ class Searchbar extends Component {
                  }
                 })
                 
-        })
-    
+        })   
         
         .then(res => {
             console.log(res.data)
@@ -50,6 +50,9 @@ class Searchbar extends Component {
     onChange = (e) => {
         this.setState({location: e.target.value});
     }
+    onChange2 = (e) => {
+        this.setState({guests: e.target.value});
+    }
     
     render() {
         return (
@@ -58,7 +61,7 @@ class Searchbar extends Component {
                     return (
                         <div className="card card-body mb-4 p-4">
                             <h1 className="display-4 text-center">Search Locations</h1>
-                            <Daterange></Daterange>
+                             <Daterange></Daterange>
                             <form onSubmit={this.searchLocation}>
                             <div className="form-group">
                                 <input
@@ -70,7 +73,7 @@ class Searchbar extends Component {
                                  type="text" className="form-control form-control-lg" placeholder="# of Guests"
                                 name="guests"
                                 value={this.state.guests}
-                                onChange={this.onChange}/>
+                                onChange={this.onChange2}/>
 
                             </div>
                             <button className="btn btn-primary btn-lg btn-block mb-5" type="submit">Search Locations</button>
