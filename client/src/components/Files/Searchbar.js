@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "../Style/searchbar.css";
 import axios from 'axios';
 import { Consumer } from "../../context";
+import Daterange from "./Daterange";
 
 
 
@@ -75,7 +76,7 @@ class Searchbar extends Component {
                                 value={this.state.location} 
                                 onChange={this.onChange} />
                                 </div>
-                                <div className="input-group-append col-xs-2" >
+                                <div className="input-group-append col-sm" >
                                   <input type="text"
                                   className="form-control" 
                                   placeholder="# of Guests" 
