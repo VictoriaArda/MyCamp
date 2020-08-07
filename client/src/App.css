@@ -1,5 +1,14 @@
+
+
 .App {
   text-align: center;
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F27706695%2Fcss-background-gradient-with-opaque-pattern-on-top&psig=AOvVaw2uG_jqC_zj8xGszPwJmpMD&ust=1596847944961000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiy8qrwh-sCFQAAAAAdAAAAABAD") ;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+
 }
 
 .App-logo {

@@ -3,14 +3,18 @@ import "bootstrap/dist/css/bootstrap.css";
 import Daterange from "../components/Files/Daterange";
 import Carousel from "../components/Files/Carousel";
 import Searchbar from "../components/Files/Searchbar";
+import Footer from "../components/Files/Footer";
+
 
 class Home extends Component {
     render() {
-        return ( < h2 > Welcome to React 
-            <Searchbar/> 
+        return ( <React.Fragment>
             <Daterange/>   
-            <Carousel/>                  
-            </h2>
+           <Searchbar/> 
+            <Carousel/> 
+            <Footer/>
+            </React.Fragment>            
+            
         );
     }
 }

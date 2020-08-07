@@ -12,8 +12,7 @@ import Results from "./pages/Results";
 class App extends Component {
     render() {
         return ( <Router>
-            <div>
-              <h2>Welcome to React Router Tutorial</h2>
+            <div >
               <nav className="navbar navbar-expand-lg navbar-light bg-light">
               <ul className="navbar-nav mr-auto">
                 <li><Link to={'/'} className="nav-link"> Home </Link></li>
