@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import "../Style/carousel.css";
 import ImagesCar from "../Files/ImagesCar";
-import pic1 from "../Files/projectpics/maui.jpg";
-import pic2 from "../Files/projectpics/city.jpg"
-import pic3 from "../Files/projectpics/mountains.jpg"
-import pic4 from "../Files/projectpics/japan.jpeg"
-import pic5 from "../Files/projectpics/rocks.jpg"
-import pic6 from "../Files/projectpics/bbridge.jpg"
+import pic1 from "../Files/projectpics/pic1.jpg";
+import pic2 from "../Files/projectpics/pic2.jpg";
+import pic3 from "../Files/projectpics/pic3.jpg";
+import pic4 from "../Files/projectpics/pic4.jpg";
+import pic5 from "../Files/projectpics/pic5.jpeg";
+import pic6 from "../Files/projectpics/pic7.jpg";
 
 
 
@@ -16,7 +16,7 @@ import pic6 from "../Files/projectpics/bbridge.jpg"
 
 function Carousel() {
     let carouselArray = [
-        <ImagesCar src={pic1} />,
+        <ImagesCar className= "imgCar" src={pic1} />,
         <ImagesCar src={pic2} />,
         <ImagesCar src={pic3} />,
         <ImagesCar src={pic4} />,
