@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Daterange from "../components/Files/Daterange";
 import Carousel from "../components/Files/Carousel";
 import Searchbar from "../components/Files/Searchbar";
-
+import Head from "../components/Files/Head";
 class Home extends Component {
     render() {
-        return ( < h2 > Welcome to React 
-            <Searchbar/> 
-            <Daterange/>   
-            <Carousel/>                  
-            </h2>
+        return ( <div>
+             <Head/>
+            <Searchbar/>             
+            <Carousel/>              
+       
+            </div>
         );
     }
 }

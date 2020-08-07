@@ -5,13 +5,24 @@ import Button from 'react-bootstrap/Button'
 import Button from "./Button";
 
 
+
+
 <Navbar bg="light" expand="lg">
   <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#link">Link</Nav.Link>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+              <ul className="navbar-nav mr-auto">
+                <li><Link to={'/'} className="nav-link"> Home </Link></li>
+                <li><Link to={'/Contact'} className="nav-link">Contact</Link></li>
+                <li><Link to={'/Help'} className="nav-link">Help</Link></li>
+                <li><Link to={'/Register'} className="nav-link">Register</Link></li>
+                <li><Link to={'/Login'} className="nav-link">Login</Link></li>
+                <li><Link to={'/AddYourHome'} className="nav-link">AddYourHometoMyCamp</Link></li>
+                <li><Link to={'/Results'} className="nav-link">Results</Link></li>
+              </ul>
+              </nav>
       <NavDropdown title="Dropdown" id="basic-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
