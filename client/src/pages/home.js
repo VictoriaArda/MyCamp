@@ -6,12 +6,11 @@ import Footer from "../components/Files/Footer";
 import Head from "../components/Files/Head";
 
 
+
 class Home extends Component {
     render() {
         return ( <React.Fragment>
-            <Daterange/>   
             <Head/>
-
            <Searchbar/> 
             <Carousel/> 
             <Footer/>

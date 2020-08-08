@@ -63,37 +63,36 @@ class Searchbar extends Component {
                 {value => {
                     return (
                         <section className="search-bar">
-                        <div className="container">
-                          <div className="row">
-                            <div className="col-lg-10 mx-auto">
-                              <form onSubmit={this.searchLocation}>
-                                <div className="input-group">
-                                  <input 
-                                  type="text" 
-                                  className="form-control" 
-                                  placeholder="Location..." 
-                                  name="location"
-                                value={this.state.location} 
-                                onChange={this.onChange} />
-                                </div>
-                                <div className="input-group-append col-sm" >
-                                  <input type="text"
-                                  className="form-control" 
-                                  placeholder="# of Guests" 
-                                  name="guests"
-                                  value={this.state.guests} 
-                                  onChange={this.onChange2} />
-                                </div>
-                                <div className="input-group-append">
-                                <button class="btn btn-primary " type="submit">Search</button>
-                                </div>
-                      
-                              </form>
-                                                                       
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+                            <div className="container">
+                                        <form className ="row" onSubmit={this.searchLocation}>
+                                            <Daterange />
+                                            <div className="col">
+                                                <input 
+                                                type="text" 
+                                                className="form-control" 
+                                                placeholder="Location..." 
+                                                name="location"
+                                                value={this.state.location} 
+                                                onChange={this.onChange} />
+                                            </div>
+                                            <div className="col">
+                                                <input 
+                                                type="text" 
+                                                className="form-control" 
+                                                placeholder="# of Guests" 
+                                                name="guests"
+                                                value={this.state.guests} 
+                                                onChange={this.onChange2} />
+                                            </div>
+                                            <div className="col">
+                                                <button class="btn btn-primary " type="submit">Search</button>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
+                            
+                        </section>
                   );
                 }}
                 
