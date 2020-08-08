@@ -6,4 +6,6 @@
 .card-image {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px !important;
     border-radius: 16px !important;
+    width: 430px;
+    height: 220px;
 }
