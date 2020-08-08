@@ -39,11 +39,9 @@ class Searchbar extends Component {
                 console.log(res.data)
                 return this.setState({ listings: res.data.listings });
 
+
             })
             .catch(err => console.log(Error));
-
-
-
     }
 
 
@@ -57,7 +55,8 @@ class Searchbar extends Component {
         this.setState({ guests: e.target.value });
     }
 
-    render() {
+    
+     render() {
         return (
             <Consumer>
                 {value => {
@@ -89,9 +88,8 @@ class Searchbar extends Component {
                                             </div>
 
                                         </form>
-
-                                    </div>
-                            
+                                       
+                            </div>
                         </section>
                   );
                 }}
