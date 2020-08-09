@@ -21,25 +21,32 @@ function Register() {
     function handleFormSubmit(event) {
         event.preventDefault();
 
-        API.saveUser({
+        if (userState.password !== userState.confirmPassword){
+            console.log("Not the same password!");
+            return;
+        } else {
+            //console.log(userState);
+            API.saveUser({
                 firstname: userState.firstname,
                 lastname: userState.lastname,
                 email: userState.email,
                 password: userState.password
             })
-            .then(res => console.log(res.data))
+            .then(res => {
+                //console.log(res);
+                redirectLogin(res);       
+            })
             .catch(err => console.log(err));
-
-        // API.getUsers()
-        // .then(res => console.log(res))
-        // .catch(err => console.log(err));
-        // if (userState.password !== userState.confirmPassword){
-        //     console.log("Not the same password!");
-        // } else {
-        //     console.log(userState);
-        // }
+        }
         
-    };    
+    }
+    
+    function redirectLogin(res) {
+        //console.log(res);
+        if (res.status === 200) {
+            window.location ='/Login';
+        }
+    }
 
 
     return (
