@@ -1,9 +1,11 @@
 import React from "react";
 import { MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn, MDBInput } from "mdbreact";
+import Head from "../components/Files/Head";
 
 const Contact = () => {
   return (
     <section className="my-5">
+      <Head></Head>
       <h2 className="h1-responsive font-weight-bold text-center my-5">
         Contact us
       </h2>
