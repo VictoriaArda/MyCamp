@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import API from "../utils/API";
 import "../components/Style/logreg.css"
+import Head from "../components/Files/Head"
 
 function Register() {
     
@@ -51,8 +52,10 @@ function Register() {
 
 
     return (
+        <div>
         <div id="reg" className="row justify-content-center pt-5">
             <div className="col-md-6">
+            <Head></Head>
                 <div className="card">
                     <header className="card-header">
                         <h3 className="card-title mt-2 text-center">Register</h3>
@@ -95,6 +98,7 @@ function Register() {
                 </div>
             </div>
         </div>
+      </div>
     )  
 
 }

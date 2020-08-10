@@ -8,8 +8,7 @@ import Searchbar from "./Searchbar";
 const Home = () => {
     return(
         <Provider>
-        <React.Fragment>
-        
+        <React.Fragment>        
            <Searchbar/>
             <Listings/>
         </React.Fragment>

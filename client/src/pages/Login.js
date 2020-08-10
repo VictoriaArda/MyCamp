@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import '../components/Style/logreg.css'
+import Head from "../components/Files/Head"
 import API from '../utils/API';
+import "../components/Style/login.css";
 
 function Login() {
     const [userState, setUserState] = useState({

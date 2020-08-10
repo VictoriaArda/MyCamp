@@ -4,28 +4,23 @@ import { Jumbotron, Button, Form } from "react-bootstrap";
 import "../components/Style/jumbotron.css"
 
 class AddYourHome extends Component {
-
   state = {
     firstName: "",
     lastName: "",
     location: "",
     guestNum: ""
   };
-
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     const { name, value } = event.target;
-
     // Updating the input's state
     this.setState({
       [name]: value
     });
   };
-
   handleFormSubmit = event => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-
     // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
     alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
     this.setState({
@@ -35,9 +30,7 @@ class AddYourHome extends Component {
       guestNum: ""
     });
   };
-
   render() {
-
     return (<div className="AddYourHome">
       <div className="container">
         <Jumbotron>
@@ -87,9 +80,8 @@ class AddYourHome extends Component {
         </Jumbotron>
       </div>
     </div>
-
     );
-
   }
 }
+
 export default AddYourHome;

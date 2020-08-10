@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { MDBCol, MDBIcon } from "mdbreact";
-import "../components/Style/help.css"
+import "../components/Style/help.css";
+import Head from "../components/Files/Head";
 
 class Help extends Component {
     render() {
         return (
             <div>
+              <Head></Head>
             <h2> How can we help you? </h2> 
             <MDBCol md="6">
       <div className="input-group md-form form-sm form-1 pl-0">
