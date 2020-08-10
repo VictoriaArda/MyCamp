@@ -34,7 +34,7 @@ function Login() {
     }
 
   return (
-    <div id="log" class="row justify-content-center pt-5">
+    <div class="row justify-content-center pt-5">
         <div class="col-md-6">
             <div class="card">
                 <header class="card-header">
