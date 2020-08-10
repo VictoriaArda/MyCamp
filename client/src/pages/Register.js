@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import API from "../utils/API";
+import Head from "../components/Files/Head"
 
 function Register() {
     
@@ -21,30 +22,39 @@ function Register() {
     function handleFormSubmit(event) {
         event.preventDefault();
 
-        API.saveUser({
+        if (userState.password !== userState.confirmPassword){
+            console.log("Not the same password!");
+            return;
+        } else {
+            //console.log(userState);
+            API.saveUser({
                 firstname: userState.firstname,
                 lastname: userState.lastname,
                 email: userState.email,
                 password: userState.password
             })
-            .then(res => console.log(res.data))
+            .then(res => {
+                //console.log(res);
+                redirectLogin(res);       
+            })
             .catch(err => console.log(err));
-
-        // API.getUsers()
-        // .then(res => console.log(res))
-        // .catch(err => console.log(err));
-        // if (userState.password !== userState.confirmPassword){
-        //     console.log("Not the same password!");
-        // } else {
-        //     console.log(userState);
-        // }
+        }
         
-    };    
+    }
+    
+    function redirectLogin(res) {
+        //console.log(res);
+        if (res.status === 200) {
+            window.location ='/Login';
+        }
+    }
 
 
     return (
+        <div>
         <div className="row justify-content-center pt-5">
             <div className="col-md-6">
+            <Head></Head>
                 <div className="card">
                     <header className="card-header">
                         <h3 className="card-title mt-2 text-center">Register</h3>
@@ -87,6 +97,7 @@ function Register() {
                 </div>
             </div>
         </div>
+      </div>
     )  
 
 }

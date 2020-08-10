@@ -2,17 +2,25 @@ const db = require("../models");
 
 // Defining methods for the usersController
 module.exports = {
-  findAll: function(req, res) {
+  findUser: function(req, res) {
+    //console.log(req);
     db.User
-      .find(req.query)
-      .then(dbUser => res.json(dbUser))
+      .find({email: req.query.email})
+      .then(dbUser => {
+        res.json(dbUser);
+        console.log(dbUser);
+      })
       .catch(err => res.status(422).json(err));
   },
 
   create: function(req, res) {
+    //console.log(req);
     db.User
       .create(req.body)
-      .then(db => res.json(dbUser))
+      .then(dbUser => {
+        res.json(dbUser);
+        console.log(dbUser);
+      })
       .catch(err => res.status(422).json(err));
   }
 };
