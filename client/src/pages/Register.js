@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import API from "../utils/API";
+import "../components/Style/logreg.css"
 
 function Register() {
     
@@ -43,7 +44,7 @@ function Register() {
 
 
     return (
-        <div className="row justify-content-center pt-5">
+        <div id="reg" className="row justify-content-center pt-5">
             <div className="col-md-6">
                 <div className="card">
                     <header className="card-header">

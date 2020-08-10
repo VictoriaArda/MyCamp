@@ -1,0 +1,8 @@
+.AddYourHome {
+background-image: url(../Files/projectpics/pic11.jpg);
+position: fixed;
+min-width: 100%;
+min-height: 100%;
+background-size: cover;
+background-position: center;
+}
