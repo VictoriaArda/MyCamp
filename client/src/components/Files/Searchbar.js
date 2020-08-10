@@ -15,7 +15,7 @@ class Searchbar extends Component {
         e.preventDefault();
         axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${this.state.location}&key=4f4e2ab63ee1486aa8d4376d737c5ce1&language=en&pretty=1`)
             .then(res => {
-                console.log(res.data.results[0].geometry)
+                // console.log(res.data.results[0].geometry)
                 const { lat, lng } = (res.data.results[0].geometry)
                 return axios({
                     "method": "GET",
@@ -31,8 +31,10 @@ class Searchbar extends Component {
                 })
             })
             .then(res => {
+                // console.log(res.data, this.props)
+                return this.props.updateListings(res.data.listings);
                 console.log(res.data)
-                return this.setState({ listings: res.data.listings });
+                // return this.setState({ listings: res.data.listings });
             })
             .catch(err => console.log(Error));
     }
@@ -66,7 +68,7 @@ class Searchbar extends Component {
                                             onChange={this.onChange2} />
                                     </div>
                                     <div className="col">
-                                        <button className="btn btn-primary" type="submit">Search</button>
+                                        <button id="sbarbtn" className="btn btn-primary" type="submit">Search</button>
                                     </div>
                                 </form>
                                 {//replace the div here with a call to your component to display a listing. make the listing available as a prop to that component.
@@ -82,7 +84,7 @@ class Searchbar extends Component {
                                                 <p className="card-text">
                                                     <strong> Price: {listing.pricing_quote.rate.amount_formatted} a night </strong>
                                                 </p>
-                                                <Link to={`path='/Payment'${listing.listing.id}`} className="btn btn-primary" > View Listing
+                                                <Link to={`/Payment/${listing.listing.id}`} className="btn btn-primary" > View Listing
                                                  </Link>
                                             </div>
                                         </div>

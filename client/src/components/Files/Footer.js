@@ -37,7 +37,7 @@ const Footer = () => {
               </a>
               </p>
             </MDBCol>
-            <MDBCol md="4" lg="3" xl="3" className="mb-4 dark-grey-text">
+            <MDBCol style={{ border: "none" }} md="4" lg="3" xl="3" className="mb-4 dark-grey-text">
               <h6 className="text-uppercase font-weight-bold">
                 <strong>Contact</strong>
               </h6>

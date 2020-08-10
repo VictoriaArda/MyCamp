@@ -12,7 +12,7 @@ const Listing = (props) =>{
                 <p className="card-text">
                     <strong> Price: </strong>
                 </p>
-                <Link to={`path='/Results'${listing.id}`} className="btn btn-primary" > View Listing
+                <Link to={`path='/Payment'${listing.id}`} className="btn btn-primary" > View Listing
                 </Link>
 
 

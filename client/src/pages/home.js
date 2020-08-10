@@ -6,6 +6,7 @@ import Footer from "../components/Files/Footer";
 import Head from "../components/Files/Head";
 import Homecard from "../components/Files/Homecard"
 import { Link } from 'react-router-dom';
+import Payment from './Payment'
 
 
 
@@ -21,11 +22,10 @@ class Home extends Component {
     }
 
     render() {
-        return ( <React.Fragment>
+        return ( <div>
             <Head/>
            <Searchbar updateListings={this.updateListings}/> 
             <Carousel/> 
-            {/* <Listings/> */}
             {this.state.listings.map((listing) => {
                                     return <div className="col-md-6">
                                         <div className="card mb-4 shadow-sm">
@@ -35,7 +35,7 @@ class Home extends Component {
                                                 <p className="card-text">
                                                     <strong> Price: {listing.pricing_quote.rate.amount_formatted} a night </strong>
                                                 </p>
-                                                <Link to={`path='/Payment'${listing.listing.id}`} className="btn btn-primary" > View Listing
+                                                <Link to={`/Payment/${listing.listing.id}`} className="btn btn-primary" > View Listing
                                                  </Link>
                                             </div>
                                         </div>
@@ -43,7 +43,7 @@ class Home extends Component {
                                 })}
             <Homecard/>
             <Footer/>
-            </React.Fragment>            
+            </div>         
             
         );
     }
