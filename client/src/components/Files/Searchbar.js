@@ -9,7 +9,9 @@ class Searchbar extends Component {
     state = {
         location: "",
         guests: "",
+
         // listings: []
+
     };
     searchLocation = (e) => {
         e.preventDefault();
@@ -29,6 +31,7 @@ class Searchbar extends Component {
                         "check_out": "2021-02-26",
                     }
                 })
+
             })
             .then(res => {
                 // console.log(res.data, this.props)
@@ -36,17 +39,21 @@ class Searchbar extends Component {
             })
             .catch(err => console.log(Error));
     }
+
     onChange = (e) => {
         this.setState({ location: e.target.value });
     }
     onChange2 = (e) => {
         this.setState({ guests: e.target.value });
     }
+
+
     render() {
         return (
             <Consumer>
                 {value => {
                     return (
+
                         <section className="search-bar">
                             <div className="container">
                                 <form className ="row" onSubmit={this.searchLocation}>
@@ -81,9 +88,12 @@ class Searchbar extends Component {
 
                             </div>
                         </section>);
+
                 }}
+
             </Consumer>
         )
     }
 }
+
 export default Searchbar;

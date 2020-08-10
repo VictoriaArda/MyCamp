@@ -21,7 +21,7 @@ app.use(routes);
 // Connect to MongoDB database
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/mycamp_db",
-  { useUnifiedTopology: true, useNewUrlParser: true }
+  { useCreateIndex: true,useUnifiedTopology: true, useNewUrlParser: true }
 );
 
 app.listen(PORT, function() {
