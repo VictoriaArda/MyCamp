@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import "./App.css";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Help from "./pages/Help";
 import Register from "./pages/Register";
@@ -9,6 +9,8 @@ import Login from "./pages/Login";
 import AddYourHome from "./pages/AddYourHome";
 import Results from "./pages/Results";
 import Payment from "./pages/Payment";
+import Features from "./pages/Features";
+
 
 class App extends Component {
     render() {
@@ -24,6 +26,7 @@ class App extends Component {
                   <Route path='/AddYourHome' component={AddYourHome} />
                   <Route path='/Results' component={Results} />
                   <Route path='/Payment' component={Payment} />
+                  <Route path='/Features' component={Features} />
               </Switch>
             </div>
           </Router>
