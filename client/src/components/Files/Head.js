@@ -28,15 +28,11 @@ function Head(){
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action/3.4">
             <ul className="navbar-nav mr-auto">             
-                  <li><Link to={'/AddYourHome'} className="nav-link">AddYourHometoMyCamp</Link></li>               
+                  <li><Link to={'/AddYourHome'} className="nav-link">Add Your Home to MyCamp</Link></li>               
                 </ul>      
           </NavDropdown.Item>       
   </NavDropdown>
       </Nav>
-    <Form inline>
- <FormControl type="text" placeholder="Search" className="mr-sm-2" />
- <Button variant="outline-success">Search</Button>
-</Form>
   </Navbar.Collapse>
 </Navbar>
 

@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
 body{
     background: #2980B9;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
     background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
- 
+    font-family: 'Roboto Condensed', sans-serif;
 }
 btn{
     background :#2980B9;

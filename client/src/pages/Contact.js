@@ -7,12 +7,10 @@ const Contact = () => {
     <section className="my-5">
       <Head></Head>
       <h2 className="h1-responsive font-weight-bold text-center my-5">
-        Contact us
+      Contact MyCamp
       </h2>
       <p className="text-center w-responsive mx-auto pb-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-        error amet numquam iure provident voluptate esse quasi, veritatis
-        totam voluptas nostrum quisquam eum porro a pariatur veniam.
+      We’re here to help and answer any question you might have. We look forward to hearing from you 🙂
       </p>
       <MDBRow>
         <MDBCol lg="5" className="lg-0 mb-4">
