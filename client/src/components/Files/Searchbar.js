@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Consumer } from "../../context";
 import Daterange from "./Daterange";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import {Row,Col} from "react-bootstrap"
+import {Row,Col} from "react-bootstrap";
 class Searchbar extends Component {
     state = {
         location: "",
@@ -32,7 +32,8 @@ class Searchbar extends Component {
             })
             .then(res => {
                 console.log(res.data)
-                return this.setState({ listings: res.data.listings });
+                //  return this.setState({ listings: res.data.listings.slice(12)});
+                return this.setState({ listings: res.data.listings});
             })
             .catch(err => console.log(Error));
     }
@@ -48,6 +49,7 @@ class Searchbar extends Component {
                 {value => {
                     return (
                         <section className="search-bar">
+                            {this.state.listings.length ? <div style={{ backgroundColor: "lightblue", position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh" }}></div>:<></>}
                             <Row className="container">
                                 <form className ="row" onSubmit={this.searchLocation}>
                                 <Daterange />
