@@ -33,9 +33,9 @@ class Searchbar extends Component {
             })
             .then(res => {
                 // console.log(res.data, this.props)
-                return this.props.updateListings(res.data.listings);
+                // return this.props.updateListings(res.data.listings);
                 console.log(res.data)
-                // return this.setState({ listings: res.data.listings });
+                return this.setState({ listings: res.data.listings });
             })
             .catch(err => console.log(Error));
     }

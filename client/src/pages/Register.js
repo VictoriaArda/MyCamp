@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import API from "../utils/API";
-import "../components/Style/logreg.css"
 import Head from "../components/Files/Head"
 
 function Register() {
