@@ -4,7 +4,8 @@ import axios from 'axios';
 import { Consumer } from "../../context";
 import Daterange from "./Daterange";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import {Row,Col} from "react-bootstrap"
+import { Row, Col, Modal} from "react-bootstrap"
+import Results from "../../pages/Results";
 class Searchbar extends Component {
     state = {
         location: "",
@@ -51,8 +52,8 @@ class Searchbar extends Component {
                     return (
                         <section className="search-bar">
                             <Row className="container">
-                                <form className ="row" onSubmit={this.searchLocation}>
-                                <Daterange />
+                                <form className="row" onSubmit={this.searchLocation}>
+                                    <Daterange />
                                     <div className="form-group col">
                                         <input
                                             type="text" className="form-control" placeholder="Location..."
@@ -68,13 +69,20 @@ class Searchbar extends Component {
                                             onChange={this.onChange2} />
                                     </div>
                                     <div className="col">
-                                        <button id="sbarbtn" className="btn btn-primary" type="submit">Search</button>
+                                        <button id="sbarbtn" className="btn btn-primary" type="submit">Search
+                                        </button>
+                                        {this.state.listings.length > 0 &&
+                                         <Link to={{
+                                            pathname: '/Results',
+                                            state: { listings: this.state.listings }
+                                        }} />
+        }
                                     </div>
                                 </form>
                                 {//replace the div here with a call to your component to display a listing. make the listing available as a prop to that component.
                                     //you also need to assign a key to each component, that should be unique. Something like a id or a name that comes back in the listing.
                                 }
-                               <Row>
+                                <Row>
                                 {this.state.listings.map((listing) => {
                                     return <Col sm={3} xs={3} lg={3} md={3}>
                                         <div className="card mb-4 shadow-sm">
