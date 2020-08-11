@@ -6,8 +6,6 @@ import Footer from "../components/Files/Footer";
 import Head from "../components/Files/Head";
 import Homecard from "../components/Files/Homecard"
 import { Link } from 'react-router-dom';
-import Payment from './Payment'
-
 
 
 

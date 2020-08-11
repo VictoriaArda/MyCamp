@@ -4,6 +4,7 @@ import Head from "../components/Files/Head"
 import API from '../utils/API';
 import "../components/Style/login.css";
 
+
 function Login() {
     const [userState, setUserState] = useState({
         email: "",
@@ -32,9 +33,11 @@ function Login() {
         
     }
 
-  return (
+  return ( <div> 
     <div className="row justify-content-center pt-5">
+    
         <div className="col-md-6">
+        <Head></Head>
             <div className="card">
                 <header className="card-header">
                     <h3 className="card-title mt-2 text-center">Login</h3>
@@ -61,7 +64,10 @@ function Login() {
                 </div>
             </div>
         </div>
-    </div>
+        </div>
+        </div>
+    
+
   )
 }
 

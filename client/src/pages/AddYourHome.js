@@ -1,7 +1,8 @@
 import React, { Component, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Jumbotron, Button, Form } from "react-bootstrap";
-import "../components/Style/jumbotron.css"
+import "../components/Style/jumbotron.css";
+import Head from "../components/Files/Head";
 
 class AddYourHome extends Component {
   state = {
@@ -33,6 +34,7 @@ class AddYourHome extends Component {
   render() {
     return (<div className="AddYourHome">
       <div className="container">
+        <Head></Head>
         <Jumbotron>
           <h1>Please Register your Home</h1>
           <p>
