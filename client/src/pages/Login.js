@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import '../components/Style/logreg.css'
 import Head from "../components/Files/Head"
 import API from '../utils/API';
 import "../components/Style/login.css";
@@ -34,11 +33,11 @@ function Login() {
     }
 
   return (
-    <div class="row justify-content-center pt-5">
-        <div class="col-md-6">
-            <div class="card">
-                <header class="card-header">
-                    <h3 class="card-title mt-2 text-center">Login</h3>
+    <div className="row justify-content-center pt-5">
+        <div className="col-md-6">
+            <div className="card">
+                <header className="card-header">
+                    <h3 className="card-title mt-2 text-center">Login</h3>
                 </header>
                 <div className="card-body">
                     <form onSubmit={handleFormSubmit}>                

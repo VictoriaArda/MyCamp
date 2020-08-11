@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-
+import React, { Component, useState } from 'react';
 import axios from 'axios';
+import PaymentModal from './PaymentModal';
 import '../components/Style/bottompage.css';
 import {Col, Row, Container, Card, ListGroup, ListGroupItem} from "react-bootstrap";
 import { MDBModal, MDBModalHeader, MDBModalBody, MDBCard, MDBCardBody, MDBModalFooter, MDBCardTitle, MDBCardText, MDBBtn, MDBCol, MDBRow, MDBContainer, MDBListGroup, MDBListGroupItem } from "mdbreact";
@@ -80,12 +80,10 @@ render() {
                                 <MDBListGroupItem>Vestibulum at eros</MDBListGroupItem>
                             </MDBListGroup>
                         </MDBCardText>
-                        <MDBBtn color="primary">Primary</MDBBtn>
+                        <MDBBtn color="primary">Payment</MDBBtn>
                     </MDBCardBody>
                     
                 </MDBCard>
-                {/* <Modal open={isOpen}>
-                     that's it</Modal> */}
                       
 
 
