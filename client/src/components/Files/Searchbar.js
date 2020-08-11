@@ -5,7 +5,6 @@ import { Consumer } from "../../context";
 import Daterange from "./Daterange";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {Row,Col} from "react-bootstrap";
-import { Row, Col, Modal} from "react-bootstrap"
 import Results from "../../pages/Results";
 
 class Searchbar extends Component {
