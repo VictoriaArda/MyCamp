@@ -1,0 +1,16 @@
+.img-top {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    border-radius: 4px;
+
+}
+
+.img-bot {
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    border-radius: 4px;
+
+
+}
