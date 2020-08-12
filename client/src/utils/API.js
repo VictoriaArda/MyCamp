@@ -1,10 +1,18 @@
 import axios from "axios";
 
+// Client-side router request functions defined
 export default {
-  getUser: function(query) {
-    return axios.get("/api/users/", { params: { email: query } });
+
+  loginUser: function(loginData) {
+    return axios.post("/api/login", loginData);
   },
   saveUser: function(userData) {
-    return axios.post("/api/users", userData);
+    return axios.post("/api/register", userData);
+  },
+  saveHost: function(hostData) {
+    return axios.post("/api/hosts", hostData);
+  },
+  getHost: function(hostData) {
+    return axios.get("api/hosts", hostData);
   }
 };
