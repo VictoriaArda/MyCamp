@@ -6,3 +6,16 @@
     background-size: cover;
     background-position: center;
     }
+
+.jumbotron{
+    position: absolute;
+    padding-top: 1px;
+ 
+}
+
+.container{
+
+    position: absolute;
+    margin-bottom: 0px;
+    height: 20%;
+}
