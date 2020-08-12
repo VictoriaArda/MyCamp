@@ -1,34 +1,23 @@
 import React, { Component } from "react";
 // import Card from "../components/Files/Card"
 import {Row,Col} from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
-
+import { BrowserRouter as Link } from 'react-router-dom';
+import Head from "../components/Files/Head";
+import Paid from "../components/Files/projectpics/Paid.gif"
 
 class Results extends Component {
-    state = {
-        listings: []
-    };
+     render() {
+        return ( 
+            <div><Head></Head>
+                <img src= {Paid}></img>
+                <div><h1>Transaction Successful</h1></div>
+                <div><h2>Cancellation policy</h2>
+            <h5>Cancel before 11:00 AM on Aug 13 and only get a refund of the cleaning fee. Learn more</h5>
+            <h6>Make sure this host’s cancellation policy works for you. For reservations made after March 14, COVID-19 will not qualify as an extenuating circumstance. Learn more</h6>
+           </div>
+            
+             </div>
 
-    render() {
-        return ( <div><Row>
-            {this.state.listings.map((listing) => {
-                return <Col sm={3} xs={3} lg={3} md={3}>
-                    <div className="card mb-4 shadow-sm">
-                        <div className="card-body">
-                            <h3>{listing.listing.city}</h3>
-                            <img className="image" src={listing.listing.picture_url} alt={listing.picture_url} />
-                            <p className="card-text">
-                                <strong> Price: {listing.pricing_quote.rate.amount_formatted} a night </strong>
-                            </p>
-                            <Link to={`/Payment/${listing.listing.id}`} className="btn btn-primary" > View Listing
-                             </Link>
-                        </div>
-                    </div>
-                </Col>
-            })}
-            </Row>
-            </div>
         );
     }
 }

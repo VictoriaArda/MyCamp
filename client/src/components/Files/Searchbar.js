@@ -5,7 +5,7 @@ import { Consumer } from "../../context";
 import Daterange from "./Daterange";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {Row,Col} from "react-bootstrap";
-import Results from "../../pages/Results";
+import Head from "../Files/Head"
 
 class Searchbar extends Component {
     state = {
@@ -53,7 +53,7 @@ class Searchbar extends Component {
                 {value => {
                     return (
                         <section className="search-bar">
-                            {this.state.listings.length ? <div style={{ backgroundColor: "lightblue", position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh" }}></div>:<></>}
+                            {this.state.listings.length ? <div style={{ backgroundColor: "lightblue", position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh" }}><Head></Head></div>:<></>}
                             <Row className="container">
                                 <form className="row" onSubmit={this.searchLocation}>
                                     <Daterange />
@@ -72,8 +72,7 @@ class Searchbar extends Component {
                                             onChange={this.onChange2} />
                                     </div>
                                     <div className="col">
-                                        <button id="sbarbtn" className="btn btn-primary" type="submit">Search
-                                        </button>
+                                    <button id="sbarbtn" style={{ padding: "10px", margin: "10px" }} className="btn btn-primary" type="submit">Search</button>
                                         {this.state.listings.length > 0 &&
                                          <Link to={{
                                             pathname: '/Results',
@@ -91,7 +90,7 @@ class Searchbar extends Component {
                                         <div className="card mb-4 shadow-sm">
                                             <div className="card-body">
                                                 <h3>{listing.listing.city}</h3>
-                                                <img className="image" src={listing.listing.picture_url} alt={listing.picture_url} />
+                                                <img className="image" style={{ width: "100%", objectFit: "cover" }} src={listing.listing.picture_url} alt={listing.picture_url} />
                                                 <p className="card-text">
                                                     <strong> Price: {listing.pricing_quote.rate.amount_formatted} a night </strong>
                                                 </p>
