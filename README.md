@@ -50,7 +50,13 @@ package.json
 |   mdreact: ^0.1.5
 |   moment: ^2.19.3 
 |   mongoose: ^5.9.27
-|   request: ^2.88.2 
+|   request: ^2.88.2
+|   body-parser: ^1.19.0
+|   express-session: ^1.17.1
+|   passport: ^0.4.1
+|   passport-local: ^1.0.0
+|   path: ^0.12.7 
+
 
 | Client-Side  
 | ------------- 
@@ -63,6 +69,7 @@ package.json
 |   react-dom: ^16.13.1
 |   react-router-dom: ^5.2.0
 |   react-scripts: ^2.1.1
+
 
 ## Usage
 To use MyCamp follow these steps:
@@ -78,7 +85,7 @@ npm run seed
 
 ## Preview
 
-![MyCamp preview](http://url/a.png)
+![MyCamp preview](./client/src/components/files/projectpics/MyCamp.PNG)
 
 [Deployment Link](http://a.com)
 
