@@ -4,7 +4,8 @@ import "../components/Style/payment.css"
 import Head from "../components/Files/Head";
 import Daterange from '../components/Files/Daterange'
 import "../components/Style/bottompage.css";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import CreditCard from "./CreditCard";
 
 import {
   Col,
@@ -154,7 +155,7 @@ class Payment extends Component {
                   </MDBListGroup>
                 </MDBCardText>
                 <MDBBtn color="primary">Payment</MDBBtn>
-                <Link to={`/`} className="btn btn-primary" > Payment
+                <Link to={`/CreditCard`} className="btn btn-primary" > Payment
                                                  </Link>
 
               </MDBCardBody>

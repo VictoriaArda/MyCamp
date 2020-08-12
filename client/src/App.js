@@ -10,7 +10,7 @@ import AddYourHome from "./pages/AddYourHome";
 import Results from "./pages/Results";
 import Payment from "./pages/Payment";
 import Features from "./pages/Features";
-
+import CreditCard from "./pages/CreditCard";
 
 class App extends Component {
     render() {
@@ -27,7 +27,7 @@ class App extends Component {
                   <Route path='/Results' component={Results} />
                   <Route path='/Payment/:id' component={Payment} />
                   <Route path='/Payment' component={Payment} />
-
+                  <Route path='/CreditCard' component={CreditCard} />
                   <Route path='/Features' component={Features} />
               </Switch>
             </div>
