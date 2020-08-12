@@ -4,6 +4,8 @@ import "../components/Style/payment.css"
 import Head from "../components/Files/Head";
 import Daterange from '../components/Files/Daterange'
 import "../components/Style/bottompage.css";
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
 import {
   Col,
   Row,
@@ -131,8 +133,9 @@ class Payment extends Component {
                   <hr></hr>
                   <strong>Description:</strong> {this.state.listingInfo.sectioned_description.summary}
                   <hr></hr>
-                  <strong>Check In Time:</strong>{this.state.listingInfo.localized_check_in_time_window}
-                  <strong>Check Out Time:</strong>{this.state.listingInfo.localized_check_out_time}
+                  <strong>Check In Time:</strong> {this.state.listingInfo.localized_check_in_time_window}
+                  <br></br>
+                  <strong>Check Out Time:</strong> {this.state.listingInfo.localized_check_out_time}
                   <hr></hr>
                 </MDBCardText>
               </MDBCardBody>
@@ -141,15 +144,19 @@ class Payment extends Component {
             <MDBCol md="6" className="mb-3">
             <MDBCard className="w-60 mb-4 shadow-box-example z-depth-5">
               <MDBCardBody>
-                <MDBCardTitle>Special title treatment</MDBCardTitle>
+                <MDBCardTitle>Reservation and Payment</MDBCardTitle>
                 <MDBCardText>
                   <MDBListGroup>
+                    <MDBListGroupItem><strong>Nightly Price:</strong> $86
+                    </MDBListGroupItem>
                     <MDBListGroupItem><Daterange/></MDBListGroupItem>
-                    <MDBListGroupItem>Dapibus ac facilisis in</MDBListGroupItem>
                     <MDBListGroupItem>Vestibulum at eros</MDBListGroupItem>
                   </MDBListGroup>
                 </MDBCardText>
                 <MDBBtn color="primary">Payment</MDBBtn>
+                <Link to={`/`} className="btn btn-primary" > Payment
+                                                 </Link>
+
               </MDBCardBody>
             </MDBCard>
             </MDBCol>
