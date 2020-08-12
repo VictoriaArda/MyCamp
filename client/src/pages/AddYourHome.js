@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Jumbotron, Button, Form } from "react-bootstrap";
 import "../components/Style/jumbotron.css";
 import Head from "../components/Files/Head";
+import API from "../utils/API";
 
 class AddYourHome extends Component {
   state = {
@@ -23,13 +24,23 @@ class AddYourHome extends Component {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
-    alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
-    this.setState({
-      firstName: "",
-      lastName: "",
-      location: "",
-      guestNum: ""
-    });
+    //alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+    // this.setState({
+    //   firstName: "",
+    //   lastName: "",
+    //   location: "",
+    //   guestNum: ""
+    // });
+    
+    API.saveHost({
+        firstname: this.state.firstName,
+        lastname: this.state.lastName,
+        location: this.state.location,
+        guests: this.state.guestNum
+      })
+      .then(res => console.log("Database posted ", res.data))
+      .catch(err => console.log(err))
+    //console.log(this.state);
   };
   render() {
     return (<div className="AddYourHome">
