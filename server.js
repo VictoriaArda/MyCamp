@@ -1,13 +1,21 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+const bodyParser = require('body-parser');
+var passport = require('./config/passport');
+var session = require("express-session");
 
 const PORT = process.env.PORT || 3001;
+//console.log(PORT);
 const app = express();
+const routes = require("./routes");
 
 // Middleware defined
-app.use(express.urlencoded({ extended: true }));
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(bodyParser.urlencoded({extended:false}));
+//app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Serve up static assets (usually on heroku)
@@ -23,7 +31,7 @@ mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/mycamp_db",
   { useCreateIndex: true,useUnifiedTopology: true, useNewUrlParser: true }
 );
-
+// Server listens on PORT 3001
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
