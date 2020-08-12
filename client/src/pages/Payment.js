@@ -151,14 +151,13 @@ class Payment extends Component {
                     <MDBListGroupItem>Vestibulum at eros</MDBListGroupItem>
                   </MDBListGroup>
                 </MDBCardText>
-                <MDBBtn color="primary">Payment
-                <Link to={'/CreditCard'} className="btn"></Link>
-                </MDBBtn>
+               
+                <Link to={'/CreditCard'} className="btn">Reserve</Link>
+                
               </MDBCardBody>
             </MDBCard>
             </MDBCol>
             </MDBRow>
-
           </>
         ) : (
           <div></div>
