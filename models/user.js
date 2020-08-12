@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 
+// userSchema defined
 const userSchema = new Schema({
     firstname: {
         type: String,
@@ -33,6 +34,12 @@ userSchema.pre('save', function (next) {
     })
 });
 
+// Create userSchema function to compare password and hashed password during authentication
+userSchema.methods.verifyPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+};
+
+// Create User model with userSchema
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
