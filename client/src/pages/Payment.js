@@ -30,6 +30,7 @@ import {
   MDBContainer,
   MDBListGroup,
   MDBListGroupItem,
+  MDBIcon
 } from "mdbreact";
 
 class Payment extends Component {
@@ -56,9 +57,7 @@ class Payment extends Component {
         console.log(error);
       });
 
-    //var food = "apple"
-
-    //let hungry = food === "apple" ? false : true
+    
   }
 
   render() {
@@ -72,15 +71,21 @@ class Payment extends Component {
     height: "500px",
     minWidth: "100%",
     borderRadius: "4px",
-    padding: "10px"
+    padding: "10px",
+        }
 
-    }
+      const myStyle3 ={
+        marginLeft: "270px"
+
+      }
+
+
     return (
-      <MDBContainer>
-        <MDBContainer>
-          <Head/>
-        </MDBContainer>
-        {/* {if(this.state.listingInfo.photos) return (<h1>sup</h1>)} */}
+        <MDBContainer className="parent">
+        <Head></Head>
+
+        <MDBContainer className="wrapper">
+          
         {this.state.listingInfo.photos ? (
           <>
             <MDBRow>
@@ -127,16 +132,22 @@ class Payment extends Component {
 
             <MDBCard className="w-60 mb-4">
               <MDBCardBody>
-                <MDBCardTitle>{this.state.listingInfo.sectioned_description.name}</MDBCardTitle>
+                <MDBCardTitle>{this.state.listingInfo.sectioned_description.name} <hr></hr></MDBCardTitle>
                 
                 <MDBCardText>
-                  <strong>Number of Guests:</strong> {this.state.listingInfo.guest_label}
+                <MDBIcon icon="bed" /> <strong>Number of Beds:</strong> {this.state.listingInfo.bed_label}
+                  <hr></hr>
+                  <MDBIcon icon="bath" /> <strong>Bathroom:</strong> {this.state.listingInfo.bathroom_label}
+                  <hr></hr>
+                  <MDBIcon icon="user" /> <strong>Number of Guests:</strong> {this.state.listingInfo.guest_label}
                   <hr></hr>
                   <strong>Description:</strong> {this.state.listingInfo.sectioned_description.summary}
                   <hr></hr>
                   <strong>Check In Time:</strong> {this.state.listingInfo.localized_check_in_time_window}
                   <br></br>
                   <strong>Check Out Time:</strong> {this.state.listingInfo.localized_check_out_time}
+                  <hr></hr>
+                  <strong>Amenities:</strong> {this.state.listingInfo.categorized_preview_amenities[0].amenities}
                   <hr></hr>
                 </MDBCardText>
               </MDBCardBody>
@@ -151,11 +162,16 @@ class Payment extends Component {
                     <MDBListGroupItem><strong>Nightly Price:</strong> $86
                     </MDBListGroupItem>
                     <MDBListGroupItem><Daterange/></MDBListGroupItem>
-                    <MDBListGroupItem>Vestibulum at eros</MDBListGroupItem>
+                    <MDBListGroupItem><strong></strong></MDBListGroupItem>
+                    <MDBListGroupItem><strong>Service Fee:</strong> $ 0</MDBListGroupItem>
+                    <MDBListGroupItem><strong>Cleaning Fee:</strong> $20</MDBListGroupItem>
+                    <MDBListGroupItem><strong>Occupancy Taxes and Fees:</strong> $</MDBListGroupItem>
+                    <MDBListGroupItem><strong>Total:</strong> $</MDBListGroupItem>
+
+
+
                   </MDBListGroup>
                 </MDBCardText>
-
-                <MDBBtn color="primary">Payment</MDBBtn>
       
                 <Link to={'/CreditCard'} className="btn btn-primary">Reserve</Link>
                 
@@ -168,7 +184,9 @@ class Payment extends Component {
         ) : (
           <div></div>
         )}
-      </MDBContainer>
+                    </MDBContainer>
+                    </MDBContainer>
+
     );
   }
 }

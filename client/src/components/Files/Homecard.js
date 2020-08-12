@@ -18,7 +18,7 @@ const Homecard = () => {
     <Card.Body>
       <Card.Title>Affordable Destinations</Card.Title>
       <Card.Text>
-        Budget friendly destination for 
+        Find budget friendly destinations that won't break the bank and bring fun to your rental experience. 
       </Card.Text>
     </Card.Body>
   </Card>
@@ -27,8 +27,7 @@ const Homecard = () => {
     <Card.Body>
       <Card.Title>Unique Rentals</Card.Title>
       <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
+        What to try something new? Try renting a treehouse, a villa, maybe a tiny house or air stream and so much more!
       </Card.Text>
     </Card.Body>
   </Card>
@@ -37,9 +36,7 @@ const Homecard = () => {
     <Card.Body>
       <Card.Title>Top Outdoor Attractions</Card.Title>
       <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
+        Head out doors for a socially distanced adventure. Visit national parks and local attractions and stay safe while having fun.
       </Card.Text>
     </Card.Body>
    
