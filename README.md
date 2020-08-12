@@ -85,7 +85,7 @@ npm run seed
 
 ## Preview
 
-![MyCamp preview](./client/src/components/files/projectpics/MyCamp.PNG)
+![MyCamp preview](./client/src/components/Files/projectpics/MyCamp.PNG)
 
 [Deployment Link](http://a.com)
 
