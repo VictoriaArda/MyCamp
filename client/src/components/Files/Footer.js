@@ -3,10 +3,8 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const Footer = () => {
   return (
-    <MDBFooter className="page-footer font-small lighten-5 pt-0">
-      <div style={{ backgroundColor: "#f0f0f5" }}>
-        <MDBContainer className="mt-5 mb-4 text-center text-md-left">
-          <MDBRow className="mt-3">
+    <MDBFooter style={{ backgroundColor: "#f0f0f5" }} className="page-footer font-small lighten-5 pt-0">
+      <MDBRow className="mt-3">
             <MDBCol md="3" lg="4" xl="3" className="mb-4 dark-grey-text">
               <h6 className="text-uppercase font-weight-bold">
                 <strong>My Camp</strong>
@@ -46,13 +44,13 @@ const Footer = () => {
             </p>
             </MDBCol>
           </MDBRow>
-        </MDBContainer>
+
+
         <div style={{ backgroundColor: "#9e9e9e" }} className="footer-copyright text-center py-3">
           <MDBContainer fluid>
           <p>  &copy; {new Date().getFullYear()} Copyright:{" "}  MyCamp </p>
           </MDBContainer>
         </div>
-      </div>
     </MDBFooter>
   );
 }
