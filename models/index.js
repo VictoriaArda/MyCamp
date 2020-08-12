@@ -1,3 +1,7 @@
 module.exports = {
-    User: require("./user")
-  };
+  
+  // Export all models 
+  User: require("./user"),
+  Host: require("./host")
+
+};
