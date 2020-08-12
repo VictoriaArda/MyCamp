@@ -5,7 +5,7 @@ import { Consumer } from "../../context";
 import Daterange from "./Daterange";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import {Row,Col} from "react-bootstrap";
-import Head from "../Files/Head";
+import Head from "../Files/Head"
 
 class Searchbar extends Component {
     state = {

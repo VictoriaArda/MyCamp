@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 import axios from "axios";
-import PaymentModal from "./PaymentModal";
+import "../components/Style/payment.css"
+import Head from "../components/Files/Head";
 import Daterange from '../components/Files/Daterange'
 import "../components/Style/bottompage.css";
 import {
@@ -58,28 +59,44 @@ class Payment extends Component {
   }
 
   render() {
+    const myStyle = {
+    height: "300px",
+    minWidth: "100%",
+    borderRadius: "4px",
+    padding: "10px"
+    }
+    const myStyle2 ={
+    height: "500px",
+    minWidth: "100%",
+    borderRadius: "4px",
+    padding: "10px"
+
+    }
     return (
       <MDBContainer>
+        <MDBContainer>
+          <Head/>
+        </MDBContainer>
         {/* {if(this.state.listingInfo.photos) return (<h1>sup</h1>)} */}
         {this.state.listingInfo.photos ? (
           <>
             <MDBRow>
               <MDBCol lg="4" md="12" className="mb-3">
-                <img
+                <img style={myStyle}
                   src={this.state.listingInfo.photos[0].large}
                   className="img-fluid z-depth-1"
                   alt=""
                 />
               </MDBCol>
               <MDBCol lg="4" md="6" className="mb-3">
-                <img
+                <img style={myStyle}
                   src={this.state.listingInfo.photos[1].large}
                   className="img-fluid z-depth-1"
                   alt=""
                 />
               </MDBCol>
               <MDBCol lg="4" md="6" className="mb-3">
-                <img
+                <img style={myStyle}
                   src={this.state.listingInfo.photos[2].large}
                   className="img-fluid z-depth-1"
                   alt=""
@@ -88,14 +105,14 @@ class Payment extends Component {
             </MDBRow>
             <MDBRow>
               <MDBCol md="6" className="mb-3">
-                <img
+                <img style={myStyle2}
                   src={this.state.listingInfo.photos[5].large}
                   className="img-fluid z-depth-1"
                   alt=""
                 />
               </MDBCol>
               <MDBCol md="6" className="mb-3">
-                <img
+                <img style={myStyle2}
                   src={this.state.listingInfo.photos[6].large}
                   className="img-fluid z-depth-1"
                   alt=""
@@ -112,7 +129,7 @@ class Payment extends Component {
                 <MDBCardText>
                   <strong>Number of Guests:</strong> {this.state.listingInfo.guest_label}
                   <hr></hr>
-                  <strong>Description:</strong> {this.state.listingInfo.sectioned_description.description}
+                  <strong>Description:</strong> {this.state.listingInfo.sectioned_description.summary}
                   <hr></hr>
                   <strong>Check In Time:</strong>{this.state.listingInfo.localized_check_in_time_window}
                   <strong>Check Out Time:</strong>{this.state.listingInfo.localized_check_out_time}
@@ -122,7 +139,7 @@ class Payment extends Component {
             </MDBCard>
             </MDBCol>
             <MDBCol md="6" className="mb-3">
-            <MDBCard className="w-50 shadow-box-example z-depth-5">
+            <MDBCard className="w-60 mb-4 shadow-box-example z-depth-5">
               <MDBCardBody>
                 <MDBCardTitle>Special title treatment</MDBCardTitle>
                 <MDBCardText>
