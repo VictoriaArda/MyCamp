@@ -23,10 +23,12 @@
     "@babel/runtime": "^7.0.0",
     "axios": "^0.19.2",
     "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
     "create-react-context": "^0.3.0",
     "dom": "0.0.3",
     "express": "^4.16.3",
+    "express-session": "^1.17.1",
     "firebase": "^7.17.1",
     "if-env": "^1.0.4",
     "material-components-web": "^7.0.0",
@@ -34,6 +36,9 @@
     "mdreact": "^0.1.5",
     "moment": "^2.19.3",
     "mongoose": "^5.9.27",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
     "react-credit-cards": "^0.8.3",
     "request": "^2.88.2"
   }
