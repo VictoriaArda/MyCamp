@@ -12,8 +12,7 @@ function ResultButton(props) {
 
   return (
     <div className="col">
-    <button id="sbarbtn" className="btn btn-primary" type="submit" onClick={handleClick}>Search</button>
-    <Results listingResults = {props.listingResults}></Results>
+    <button id="sbarbtn" className="btn btn-primary" type="submit" onClick={handleClick}>Submit Payment</button>
     </div>
   );
 }
