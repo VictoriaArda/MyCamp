@@ -71,15 +71,21 @@ class Payment extends Component {
     height: "500px",
     minWidth: "100%",
     borderRadius: "4px",
-    padding: "10px"
+    padding: "10px",
+        }
 
-    }
+      const myStyle3 ={
+        marginLeft: "270px"
+
+      }
+
+
     return (
-      <MDBContainer>
-        <MDBContainer>
-          <Head/>
-        </MDBContainer>
-        {/* {if(this.state.listingInfo.photos) return (<h1>sup</h1>)} */}
+        <MDBContainer className="parent">
+        <Head></Head>
+
+        <MDBContainer className="wrapper">
+          
         {this.state.listingInfo.photos ? (
           <>
             <MDBRow>
@@ -166,10 +172,6 @@ class Payment extends Component {
 
                   </MDBListGroup>
                 </MDBCardText>
-                <Link to={`/CreditCard`} className="btn btn-primary" > Payment
-                                                 </Link>
-
-                <MDBBtn color="primary">Payment</MDBBtn>
       
                 <Link to={'/CreditCard'} className="btn btn-primary">Reserve</Link>
                 
@@ -182,7 +184,9 @@ class Payment extends Component {
         ) : (
           <div></div>
         )}
-      </MDBContainer>
+                    </MDBContainer>
+                    </MDBContainer>
+
     );
   }
 }

@@ -1,16 +1,24 @@
-.img-top {
-    height: 120px;
-    width: 120px;
-    position: absolute;
-    border-radius: 4px;
-
+.parent{
+    
+        position: relative;
+    
 }
-
-.img-bot {
-    height: 200px;
-    width: 300px;
+/* 
+.paywrapper {
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
     position: absolute;
-    border-radius: 4px;
+    top: 0; left: 0; bottom: 0; right: 0;
+} */
 
 
-}
+    /* .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+
+} */
+
