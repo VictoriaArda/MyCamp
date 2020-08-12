@@ -13,6 +13,8 @@ function Register() {
         confirmPassword: ""
     });
 
+    const [messageState, setMessageState] = useState("");
+
     function handleInputChange(event) {
         const {name, value} = event.target; 
         setUserState({...userState, [name]: value});
@@ -22,10 +24,10 @@ function Register() {
     function handleFormSubmit(event) {
         event.preventDefault();
 
-        if (userState.password !== userState.confirmPassword){
-            console.log("Not the same password!");
-            return;
-        } else {
+        if ((userState.password !== userState.confirmPassword)){
+            setMessageState("Enter valid password");
+        }   
+        else {
             //console.log(userState);
             API.saveUser({
                 firstname: userState.firstname,
@@ -41,6 +43,7 @@ function Register() {
         }
         
     }
+    //console.log(messageState);
     
     function redirectLogin(res) {
         //console.log(res);
@@ -52,7 +55,7 @@ function Register() {
 
     return (
         <div>
-        <div  className="row justify-content-center pt-5">
+        <div className="row justify-content-center pt-5">
             <div className="col-md-6">
             <Head></Head>
                 <div className="card">
@@ -89,6 +92,9 @@ function Register() {
 
                             <div className="form-group">
                                 <button type="submit" className="btn btn-success btn-block">Register</button>
+                                <div name="message" className="text-center">
+                                    <p className="text-danger pt-2">{messageState}</p>
+                                </div>
                             </div>
                         </form>
                     </div>
