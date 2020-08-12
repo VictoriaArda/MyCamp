@@ -12,19 +12,17 @@ export class Provider extends Component {
     componentDidMount() {
         axios({
             "method":"GET",
-            "url":`https://airbnb-com.p.rapidapi.com/listings/nearby/`,
+            "url":"https://airbnb-com.p.rapidapi.com/listing/",
             "headers":{
             "content-type":"application/octet-stream",
             "x-rapidapi-host":"airbnb-com.p.rapidapi.com",
             "x-rapidapi-key":"e9a234de2amshfb394e36da3e9f0p1fe03fjsnda119de32de4",
             "useQueryString":true
-            },"params":{
-            "check_out":"2021-02-26",
              }
             })
-        .then(res => {
-            // console.log(res.data)
-        this.setState({listings: res.data.listings})
+        .then(response => {
+            console.log(response)
+        this.setState({listings: response.data.listings})
             
     })
         .catch (err => console.log(Error));

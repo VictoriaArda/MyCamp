@@ -52,7 +52,7 @@ function Register() {
 
     return (
         <div>
-        <div className="row justify-content-center pt-5">
+        <div  className="row justify-content-center pt-5">
             <div className="col-md-6">
             <Head></Head>
                 <div className="card">

@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 
 
-
 class Home extends Component {
     state = {
 
@@ -21,11 +20,10 @@ class Home extends Component {
     }
 
     render() {
-        return ( <React.Fragment>
+        return ( <div>
             <Head/>
            <Searchbar updateListings={this.updateListings}/> 
             <Carousel/> 
-            {/* <Listings/> */}
             {this.state.listings.map((listing) => {
                                     return <div className="col-md-6">
                                         <div className="card mb-4 shadow-sm">
@@ -35,7 +33,7 @@ class Home extends Component {
                                                 <p className="card-text">
                                                     <strong> Price: {listing.pricing_quote.rate.amount_formatted} a night </strong>
                                                 </p>
-                                                <Link to={`path='/Payment'${listing.listing.id}`} className="btn btn-primary" > View Listing
+                                                <Link to={`/Payment/${listing.listing.id}`} className="btn btn-primary" > View Listing
                                                  </Link>
                                             </div>
                                         </div>
@@ -43,7 +41,7 @@ class Home extends Component {
                                 })}
             <Homecard/>
             <Footer/>
-            </React.Fragment>            
+            </div>         
             
         );
     }

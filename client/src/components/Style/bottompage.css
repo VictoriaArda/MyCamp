@@ -1,0 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
+.col-md-8,
+.col-md-4 {
+padding: 1rem;
+border: 2px solid #fff;
+/* color: #fff; */
+text-align: center;
+}
