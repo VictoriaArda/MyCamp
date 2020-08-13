@@ -28,7 +28,7 @@ app.use(routes);
 
 // Connect to MongoDB database
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/mycamp_db",
+  process.env.MONGODB_URI || "mongodb://user1:password1@ds127982.mlab.com:27982/heroku_qll7blcl",
   { useCreateIndex: true,useUnifiedTopology: true, useNewUrlParser: true }
 );
 // Server listens on PORT 3001
