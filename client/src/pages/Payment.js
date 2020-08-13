@@ -144,18 +144,13 @@ class Payment extends Component {
                     </MDBListGroupItem>
                     <MDBListGroupItem><Daterange/></MDBListGroupItem>
                     <MDBListGroupItem><strong></strong></MDBListGroupItem>
-                    <MDBListGroupItem><strong>Service Fee:</strong> $ 0</MDBListGroupItem>
+                    <MDBListGroupItem><strong>Service Fee:</strong> $50</MDBListGroupItem>
                     <MDBListGroupItem><strong>Cleaning Fee:</strong> $20</MDBListGroupItem>
-                    <MDBListGroupItem><strong>Occupancy Taxes and Fees:</strong> $</MDBListGroupItem>
-                    <MDBListGroupItem><strong>Total:</strong> $</MDBListGroupItem>
-
-
-
+                    <MDBListGroupItem><strong>Occupancy Taxes and Fees:</strong> $12</MDBListGroupItem>
+                    <MDBListGroupItem><strong>Total:</strong> $254</MDBListGroupItem>
                   </MDBListGroup>
-                </MDBCardText>
-      
-                <Link to={'/CreditCard'} className="btn btn-primary">Reserve</Link>
-                
+                </MDBCardText>      
+                <Link to={'/CreditCard'} className="btn btn-primary">Reserve</Link>             
 
               </MDBCardBody>
             </MDBCard>
