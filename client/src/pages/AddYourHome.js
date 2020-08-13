@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Jumbotron, Button, Form } from "react-bootstrap";
 import "../components/Style/jumbotron.css";
@@ -82,7 +82,7 @@ class AddYourHome extends Component {
             <Form.Group controlId="exampleForm.ControlInput1">
               <Form.Label>Enter Number of Guests</Form.Label>
               <Form.Control
-                value={this.state.guestNim}
+                value={this.state.guestNum}
                 name="guestNum"
                 onChange={this.handleInputChange}
                 type="number"

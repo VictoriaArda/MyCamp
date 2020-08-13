@@ -1,30 +1,16 @@
-import React, { Component, useState } from "react";
+import React, { Component} from "react";
 import axios from "axios";
 import "../components/Style/payment.css"
 import Head from "../components/Files/Head";
 import Daterange from '../components/Files/Daterange'
 import "../components/Style/bottompage.css";
-
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 
 import {
-  Col,
-  Row,
-  Container,
-  Card,
-  ListGroup,
-  ListGroupItem,
-} from "react-bootstrap";
-import {
-  MDBModal,
-  MDBModalHeader,
-  MDBModalBody,
   MDBCard,
   MDBCardBody,
-  MDBModalFooter,
   MDBCardTitle,
   MDBCardText,
-  MDBBtn,
   MDBCol,
   MDBRow,
   MDBContainer,
@@ -74,12 +60,7 @@ class Payment extends Component {
     padding: "10px",
         }
 
-      const myStyle3 ={
-        marginLeft: "270px"
-
-      }
-
-
+      
     return (
         <MDBContainer className="parent">
         <Head></Head>
