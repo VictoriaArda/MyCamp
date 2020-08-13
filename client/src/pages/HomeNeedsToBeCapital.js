@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 
-class Home extends Component {
+class HomeNeedsToBeCapital extends Component {
     state = {
 
         listings: []
@@ -47,4 +47,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default HomeNeedsToBeCapital;
