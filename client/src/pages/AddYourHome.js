@@ -45,8 +45,10 @@ class AddYourHome extends Component {
   render() {
     return (<div className="AddYourHome">
       <div className="container">
-        <Head></Head>
+     
+       
         <Jumbotron>
+        <Head></Head>
           <h1>Please Register your Home</h1>
           <p>
             On this page you will be allowed to add your home as a place of stay for your guests!
@@ -91,6 +93,7 @@ class AddYourHome extends Component {
           </Form>
           <Button onClick={this.handleFormSubmit} variant="success">Add Your Home</Button>{' '}
         </Jumbotron>
+       
       </div>
     </div>
     );
