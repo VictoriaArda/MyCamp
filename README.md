@@ -87,7 +87,7 @@ npm run seed
 
 ![MyCamp preview](./client/src/components/Files/projectpics/MyCamp.PNG)
 
-[Deployment Link](http://a.com)
+[Deployment Link](https://mycamp2020.herokuapp.com/)
 
 ## Contributors
 
