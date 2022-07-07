@@ -34,7 +34,7 @@
     "material-components-web": "^7.0.0",
     "mdbreact": "^4.27.0",
     "mdreact": "^0.1.5",
-    "moment": "^2.19.3",
+    "moment": "^2.29.4",
     "mongoose": "^5.9.27",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
